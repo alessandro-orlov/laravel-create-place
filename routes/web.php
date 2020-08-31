@@ -16,9 +16,7 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/students', function () {
-    return view('students');
-})->name('studenti');
+Route::get('/students', 'StudentController@index' )->name('studenti');
 
 Route::get('/welcome', function () {
     return view('welcome');
