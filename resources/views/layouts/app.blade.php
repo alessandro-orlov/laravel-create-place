@@ -19,6 +19,29 @@
                 height: 100vh;
                 margin: 0;
             }
+            nav {
+              text-align: center;
+            }
+            nav ul {
+              list-style: none;
+              padding: 0;
+            }
+            header nav > ul li {
+              display: inline-block;
+              margin: 10px;
+            }
+            nav li a {
+              text-decoration: none;
+              color: #555;
+            }
+            nav li:hover a {
+              text-decoration: underline;
+            }
+            .container {
+              max-width: 1170px;
+              width: auto;
+              margin: 0 auto;
+            }
 
             .full-height {
                 height: 100vh;
@@ -64,6 +87,9 @@
         </style>
     </head>
     <body>
+        @include('partials/header')
+
         @yield('content')
+
     </body>
 </html>
