@@ -18,6 +18,10 @@ Route::get('/', function () {
 
 Route::get('/students', 'StudentController@index' )->name('studenti');
 
+Route::get('/students-handlebars', function () {
+    return view('students-handlebars');
+});
+
 Route::get('/welcome', function () {
     return view('welcome');
 })->name('new-welcome');

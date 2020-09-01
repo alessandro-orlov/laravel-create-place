@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Api')->group(function () {
+    // Controllers Within The "App\Http\Controllers\Api" Namespace
+    Route::get('api-students', 'StudentController@index');
+});
